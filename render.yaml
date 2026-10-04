@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: jotna-backend
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: WEBHOOK_SECRET
+        value: jotna_secret_webhook_key_2026
+      - key: JWT_SECRET
+        value: jotna_jwt_super_secret_key_change_in_production
+      - key: ADMIN_USERNAME
+        value: admin
+      - key: ADMIN_PASSWORD
+        value: jotna2026admin
